@@ -1,0 +1,8 @@
+.features-btn::after,
+.company-btn::after {
+    content: url(../../images/icon-arrow-down.svg);
+}
+.features-btn.active::after,
+.company-btn.active::after {
+    content: url(../../images/icon-arrow-up.svg);
+}

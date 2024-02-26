@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend mentors intro section with dropdown">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="scss/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+
+<body class="wrapper">
+
+  <header class="header">
+    <div class="header__logo">
+      <img src="./images/logo.svg" alt="Snap logo">
+    </div>
+    <div class="header__navigation">
+      <nav class="navigation">
+        <ul class="navigation__links" id="navigation-menu-list">
+          <li>
+            <button class="features-btn" aria-expanded="false">Features</button>
+            <ul class="features-list">
+              <li>
+                <img src="./images/icon-todo.svg" alt="todo list icon">
+                <a href="#">Todo List</a>
+              </li>
+              <li>
+                <img src="./images/icon-calendar.svg" alt="calendar icon">
+                <a href="#">Calendar</a>
+              </li>
+              <li>
+                <img src="./images/icon-reminders.svg" alt="reminders icon">
+                <a href="#">Reminders</a>
+              </li>
+              <li>
+                <img src="./images/icon-planning.svg" alt="planning icon">
+                <a href="#">Planning</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <button class="company-btn" aria-expanded="false">Company</button>
+            <ul class="company-info">
+              <li>
+                <a href="#">History</a>
+              </li>
+              <li>
+                <a href="#">Our Team</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Careers</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+        </ul>
+        <div class="auth-buttons-container">
+          <button class="login-btn">Login</button>
+          <button class="register-btn">Register</button>
+        </div>
+      </nav>
+      <button class="navigation__hamburger" type="button" title="hamburger menu button"
+        aria-controls="navigation-menu-list" aria-expanded="false" id="hamburger-menu-button">
+        <span class="navigation__bar"></span>
+        <span class="navigation__bar"></span>
+        <span class="navigation__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="main__mobile-hero-image">
+      <img src="./images/image-hero-mobile.png" alt="A picture of a person working with a laptop and some shapes">
+    </div>
+    <div class="main__content">
+      <h1 class="main__heading">Make remote work</h1>
+      <p class="main-paragraph">
+        Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
+      <button class="learn-more-btn">Learn more</button>
+      <div class="clients">
+        <div class="client">
+          <img src="./images/client-databiz.svg" alt="databiz logo">
+        </div>
+        <div class="client">
+          <img src="./images/client-audiophile.svg" alt="audiophile logo">
+        </div>
+        <div class="client">
+          <img src="./images/client-meet.svg" alt="meet logo">
+        </div>
+        <div class="client">
+          <img src="./images/client-maker.svg" alt="maker logo">
+        </div>
+      </div>
+    </div>
+    <div class="main__desktop-hero-image">
+      <img src="./images/image-hero-desktop.png" alt="A picture of a person working with a laptop and some shapes">
+    </div>
+  </main>
+</body>
+
+</html>
