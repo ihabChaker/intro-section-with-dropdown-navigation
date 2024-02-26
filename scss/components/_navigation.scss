@@ -1,10 +1,80 @@
-.header__logo {
-    max-width: 40px;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     @media screen and (min-width: 800px) {
-        max-width: 64px;
+        justify-content: initial;
+        gap: 7rem;
     }
 }
+.header__logo {
+    max-width: 50px;
+    @media screen and (min-width: 800px) {
+        max-width: 84px;
+    }
+}
+.header__navigation {
+    width: 100%;
+}
+.navigation {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    @media screen and (min-width: 800px) {
+        flex-direction: row;
+        justify-content: space-between;
 
+        visibility: visible;
+    }
+}
+.navigation__links {
+    list-style-type: none;
+    color: $almost-black;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 800px) {
+        flex-direction: row;
+        gap: 4rem;
+    }
+}
+.navigation__links > li {
+    display: flex;
+    align-items: center;
+}
+.navigation__links a {
+    text-decoration: none;
+    color: $almost-black;
+}
+.company-info,
+.features-list {
+    display: none;
+}
+.company-info.active,
+.features-list.active {
+    display: block;
+}
+.feature {
+    &::before {
+        margin-right: 5px;
+    }
+
+    @each $icon, $url in $icons {
+        &[data-icon="#{$icon}"]::before {
+            content: $url;
+        }
+    }
+}
+.auth-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    @media screen and (min-width: 800px) {
+        flex-direction: row;
+    }
+}
 .navigation__hamburger {
     background-color: transparent;
     border: 0;
@@ -23,7 +93,7 @@
     }
 }
 .navigation__bar {
-    border: 3px solid $dark-grayish-blue;
+    border: 3px solid $almost-black;
     width: 40px;
 }
 .navigation__hamburger.active :nth-child(1) {

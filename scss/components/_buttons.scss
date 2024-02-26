@@ -1,8 +1,31 @@
+.features-btn,
+.company-btn,
+.login-btn,
+.register-btn {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.features-btn,
+.company-btn {
+    padding: 0;
+}
 .features-btn::after,
 .company-btn::after {
+    margin-left: 5px;
     content: url(../../images/icon-arrow-down.svg);
 }
 .features-btn.active::after,
 .company-btn.active::after {
     content: url(../../images/icon-arrow-up.svg);
+}
+
+.login-btn,
+.register-btn {
+    padding: 10px 22px;
+}
+.register-btn {
+    border: 2px solid $medium-gray;
+    border-radius: 2rem;
 }

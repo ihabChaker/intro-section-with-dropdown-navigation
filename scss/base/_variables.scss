@@ -1,2 +1,8 @@
 $column-gap: 3rem;
 $row-gap: 3rem;
+$icons: (
+    "todo": url("../../images/icon-todo.svg"),
+    "reminder": url("../../images/icon-reminder.svg"),
+    "planning": url("../../images/icon-planning.svg"),
+    "calendar": url("../../images/icon-calendar.svg")
+);

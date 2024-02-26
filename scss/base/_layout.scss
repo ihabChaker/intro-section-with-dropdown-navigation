@@ -3,34 +3,12 @@
     padding-top: 1rem;
     margin: 0 auto;
     @media screen and (min-width: 640px) {
+        padding-inline: 2rem;
         padding-top: 2rem;
     }
     @media screen and (min-width: 800px) {
-        padding: 0;
-        padding-top: 4rem;
+        padding-inline: 4rem;
         padding-bottom: 2rem;
-    }
-}
-
-.main-grid-layout {
-    display: grid;
-    grid-template-areas: "main" "aside" "recommendations";
-    row-gap: $row-gap;
-    column-gap: $column-gap;
-    margin-top: 2rem;
-    @media screen and (min-width: 640px) {
-        margin-top: 3rem;
-    }
-
-    @media screen and (min-width: 800px) {
-        margin-top: 4rem;
-    }
-
-    @media screen and (min-width: 1100px) {
-        grid-template-areas:
-            "main main aside"
-            "recommendations recommendations recommendations";
-        margin-top: 5rem;
-        row-gap: 5.5rem;
+        // padding-top: 1rem;
     }
 }
