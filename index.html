@@ -24,11 +24,13 @@
       <img src="./images/logo.svg" alt="Snap logo">
     </div>
     <div class="header__navigation">
-      <nav class="navigation" id="navigation">
+      <nav class="navigation" id="navigation" aria-labelledby="primary-nav">
+        <p id="primary-nav" hidden>Primary navigation</p>
         <ul class="navigation__links" id="navigation-menu-list">
           <li class="features">
-            <button class="features-btn" id="features-btn" aria-expanded="false">Features</button>
-            <ul class="features-list">
+            <button class="features-btn" id="features-btn" aria-expanded="false"
+              aria-controls="features-list">Features</button>
+            <ul class="features-list" id="features-list">
               <li>
                 <a class="feature" href="#" data-icon="todo">Todo List</a>
               </li>
@@ -44,8 +46,9 @@
             </ul>
           </li>
           <li class="company-infos">
-            <button class="company-btn" id="company-infos-btn" aria-expanded="false">Company</button>
-            <ul class="company-infos-list">
+            <button class="company-btn" id="company-infos-btn" aria-expanded="false"
+              aria-controls="company-infos-list">Company</button>
+            <ul class="company-infos-list" id="company-infos-list">
               <li>
                 <a href="#">History</a>
               </li>
@@ -79,6 +82,7 @@
   </header>
 
   <main class="main-layout">
+    <h2 class="sr-only">The content of the page</h2>
     <div id="overlay"></div>
     <div class="main__mobile-hero-image">
       <img src="./images/image-hero-mobile.png" alt="A picture of a person working with a laptop and some shapes">
