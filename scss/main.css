@@ -12,7 +12,7 @@ html {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-family: "Inter", sans-serif;
+  font-family: "Epilogue", "sans-serif";
   min-height: 100vh;
 }
 @media (min-width: 640px) and (max-width: 800px) {
@@ -62,19 +62,52 @@ h6 {
   isolation: isolate;
 }
 
-html {
-  font-family: "Epilogue", "sans-serif";
-}
-
 .navigation__links,
 .login-btn,
 .register-btn {
   font-size: 1.6rem;
 }
 
+.main__heading {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+@media screen and (min-width: 800px) {
+  .main__heading {
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .main__heading {
+    font-size: 8rem;
+  }
+}
+
+.main-paragraph {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.learn-more-btn {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.navigation__links a:is(:hover, :focus-visible),
+.navigation__links button:is(:hover, :focus-visible) {
+  font-weight: 700;
+}
+
+.login-btn:is(:hover, :focus),
+.register-btn:is(:hover, :focus) {
+  font-weight: 700;
+}
+
 .wrapper {
-  padding: 2rem;
+  padding-inline: 2rem;
   padding-top: 1rem;
+  padding-bottom: 0;
   margin: 0 auto;
 }
 @media screen and (min-width: 640px) {
@@ -86,7 +119,7 @@ html {
 @media screen and (min-width: 800px) {
   .wrapper {
     padding-inline: 4rem;
-    padding-bottom: 2rem;
+    padding-top: 0;
   }
 }
 
@@ -112,6 +145,134 @@ body {
   }
 }
 
+@media screen and (min-width: 1100px) {
+  .main__mobile-hero-image {
+    display: none;
+  }
+}
+
+.main__desktop-hero-image {
+  display: none;
+}
+@media screen and (min-width: 1100px) {
+  .main__desktop-hero-image {
+    display: block;
+  }
+  .main__desktop-hero-image img {
+    padding-left: 9rem;
+    object-fit: cover;
+  }
+}
+
+.main-layout {
+  display: grid;
+  padding-top: 4rem;
+  gap: 4rem;
+}
+@media screen and (min-width: 1100px) {
+  .main-layout {
+    max-width: min(82%, 1200px);
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .main-layout {
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1300px) {
+  .main-layout {
+    gap: 5rem;
+  }
+}
+
+.main__content {
+  position: relative;
+}
+
+.main__content-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-block: 2rem;
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 1100px) {
+  .main__content-container {
+    display: block;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .main__content-container {
+    gap: 4.5rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .main__content-container {
+    text-align: initial;
+  }
+}
+@media screen and (min-width: 460px) {
+  .main__content-container {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .main__content-container {
+    margin-block: initial;
+    margin-bottom: 5rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .main__content-container {
+    padding-top: 4rem;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .main__content-container {
+    padding-top: 11rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .main__heading span::after {
+    content: "\a";
+    white-space: pre;
+  }
+}
+
+.main-paragraph {
+  color: hsl(0, 0%, 41%);
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1100px) {
+  .main-paragraph {
+    margin-bottom: 4.5rem;
+  }
+}
+
+.learn-more-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.clients {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1100px) {
+  .clients {
+    justify-content: initial;
+    gap: 3rem;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
 [class*=sr-only] {
   padding: 0;
   position: absolute;
@@ -127,7 +288,8 @@ body {
 .features-btn,
 .company-btn,
 .login-btn,
-.register-btn {
+.register-btn,
+.learn-more-btn {
   border: 0;
   background-color: transparent;
   cursor: pointer;
@@ -150,13 +312,39 @@ body {
 }
 
 .login-btn,
-.register-btn {
+.register-btn,
+.learn-more-btn {
   padding: 10px 22px;
 }
 
-.register-btn {
+.learn-more-btn {
+  padding: 12px 29px;
+}
+
+.register-btn,
+.learn-more-btn {
   border: 2px solid hsl(0, 0%, 41%);
+}
+
+.register-btn {
   border-radius: 2rem;
+}
+
+.learn-more-btn {
+  border-radius: 1.5rem;
+}
+
+.learn-more-btn {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+}
+.learn-more-btn:is(:hover, :focus) {
+  background-color: initial;
+  color: initial;
+}
+
+.register-btn:is(:hover, :focus) {
+  border-width: 3px;
 }
 
 .header {
@@ -169,6 +357,11 @@ body {
 @media screen and (min-width: 800px) {
   .header {
     justify-content: initial;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .header {
     gap: 7rem;
   }
 }
@@ -276,6 +469,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  z-index: 12;
   display: none;
   padding: 2rem;
   padding-bottom: 0;

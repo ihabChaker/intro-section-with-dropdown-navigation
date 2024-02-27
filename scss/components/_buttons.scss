@@ -1,7 +1,8 @@
 .features-btn,
 .company-btn,
 .login-btn,
-.register-btn {
+.register-btn,
+.learn-more-btn {
     border: 0;
     background-color: transparent;
     cursor: pointer;
@@ -22,10 +23,31 @@
 }
 
 .login-btn,
-.register-btn {
+.register-btn,
+.learn-more-btn {
     padding: 10px 22px;
 }
-.register-btn {
+.learn-more-btn {
+    padding: 12px 29px;
+}
+.register-btn,
+.learn-more-btn {
     border: 2px solid $medium-gray;
+}
+.register-btn {
     border-radius: 2rem;
+}
+.learn-more-btn {
+    border-radius: 1.5rem;
+}
+.learn-more-btn {
+    background-color: $almost-black;
+    color: $almost-white;
+    &:is(:hover, :focus) {
+        background-color: initial;
+        color: initial;
+    }
+}
+.register-btn:is(:hover, :focus) {
+    border-width: 3px;
 }
