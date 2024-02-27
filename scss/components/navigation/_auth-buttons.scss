@@ -1,0 +1,16 @@
+.auth-buttons-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    @media screen and (min-width: 800px) {
+        gap: 2rem;
+        flex-direction: row;
+        width: initial;
+    }
+    button {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+}

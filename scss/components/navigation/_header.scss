@@ -1,0 +1,23 @@
+.header {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2rem;
+    @media screen and (min-width: 800px) {
+        justify-content: initial;
+        gap: 7rem;
+    }
+}
+.header__logo {
+    max-width: 50px;
+    @media screen and (min-width: 800px) {
+        max-width: 84px;
+    }
+}
+.header__navigation {
+    @media screen and (min-width: 800px) {
+        width: 100%;
+    }
+}

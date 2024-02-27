@@ -1,7 +1,7 @@
 body {
     overflow-x: hidden;
 }
-.overlay {
+#overlay {
     top: 0;
     left: 0;
     position: absolute;
@@ -12,5 +12,8 @@ body {
     display: none;
     &.active {
         display: block;
+        @media screen and (min-width: 800px) {
+            display: none;
+        }
     }
 }

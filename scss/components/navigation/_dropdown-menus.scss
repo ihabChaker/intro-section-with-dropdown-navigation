@@ -1,0 +1,58 @@
+.features,
+.company-infos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.features-list,
+.company-infos-list {
+    list-style-type: none;
+
+    background-color: #fff;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    display: none;
+    &.active {
+        display: block;
+    }
+    @media screen and (min-width: 800px) {
+        position: absolute;
+        top: 120%;
+    }
+
+    padding: 2rem;
+    padding-bottom: 0;
+    @media screen and (min-width: 800px) {
+        padding-bottom: 2rem;
+    }
+}
+.features-list {
+    right: 0;
+    width: 160px;
+}
+.company-infos-list {
+    left: 0;
+    width: 125px;
+}
+.features-list li a {
+    display: block;
+    width: auto;
+}
+
+.feature {
+    &::before {
+        margin-right: 10px;
+    }
+
+    @each $icon, $url in $icons {
+        &[data-icon="#{$icon}"]::before {
+            content: $url;
+        }
+    }
+}

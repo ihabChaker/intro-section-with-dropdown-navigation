@@ -1,0 +1,37 @@
+.navigation__hamburger {
+    background-color: transparent;
+    border: 0;
+
+    height: 40px;
+
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    z-index: 11;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.7s;
+
+    @media screen and (min-width: 800px) {
+        display: none;
+    }
+}
+.navigation__bar {
+    border: 3px solid $almost-black;
+    width: 40px;
+}
+.navigation__hamburger.active :nth-child(1) {
+    transition: all 0.7s;
+    transform: translateY(5px) rotate(45deg);
+}
+.navigation__hamburger.active :nth-child(2) {
+    transition: all 0.7s;
+    display: none;
+}
+.navigation__hamburger.active :nth-child(3) {
+    transition: all 0.7s;
+    transform: translateY(-5px) rotate(-45deg);
+}

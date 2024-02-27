@@ -10,7 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="scss/main.css">
-  <script src="./navigation.js" defer></script>
+  <script src="./scripts/navigation.js" defer></script>
+  <script src="./scripts/dropdown.js" defer></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
@@ -23,10 +24,10 @@
       <img src="./images/logo.svg" alt="Snap logo">
     </div>
     <div class="header__navigation">
-      <nav class="navigation">
+      <nav class="navigation" id="navigation">
         <ul class="navigation__links" id="navigation-menu-list">
           <li class="features">
-            <button class="features-btn" aria-expanded="false">Features</button>
+            <button class="features-btn" id="features-btn" aria-expanded="false">Features</button>
             <ul class="features-list">
               <li>
                 <a class="feature" href="#" data-icon="todo">Todo List</a>
@@ -43,7 +44,7 @@
             </ul>
           </li>
           <li class="company-infos">
-            <button class="company-btn" aria-expanded="false">Company</button>
+            <button class="company-btn" id="company-infos-btn" aria-expanded="false">Company</button>
             <ul class="company-infos-list">
               <li>
                 <a href="#">History</a>
@@ -78,7 +79,7 @@
   </header>
 
   <main class="main">
-    <div class="overlay"></div>
+    <div id="overlay"></div>
     <div class="main__mobile-hero-image">
       <img src="./images/image-hero-mobile.png" alt="A picture of a person working with a laptop and some shapes">
     </div>
